@@ -1,2 +1,33 @@
-<h1>this is my first django page. hurrey !!!!!</h1>
-{{ password}}
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+/>
+<div class="container text-center">
+  <h1>Password Generator</h1>
+  <form action="{% url 'password' %}">
+    <select name="length">
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10" selected="selected">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+    </select>
+    Length
+    <br />
+    <input type="checkbox" name="uppercase" checked />Uppercase
+    <br />
+    <input type="checkbox" name="Number" checked />Number
+    <br />
+    <input type="checkbox" name="Special Characters" checked />Special
+    Characters
+    <br />
+    <input type="Submit" value="Generate password" class="btn btn-primary" />
+  </form>
+</div>
